@@ -57,14 +57,14 @@ namespace avxsynth
 #define FROM(x)	"Module=" MAKE_STRING(x) DELIMITER "Address=" __FILE__ ":" LINE_STRING
 
 
-#define AVXLOG_DEBUG(format,  ...) 	AvxLog::Debug (FROM(MODULE_NAME), format, __VA_ARGS__);
-#define AVXLOG_INFO(format,   ...) 	AvxLog::Info  (FROM(MODULE_NAME), format, __VA_ARGS__);
-#define AVXLOG_NOTICE(format, ...) 	AvxLog::Notice(FROM(MODULE_NAME), format, __VA_ARGS__);
-#define AVXLOG_WARN(format,   ...) 	AvxLog::Warn  (FROM(MODULE_NAME), format, __VA_ARGS__);
-#define AVXLOG_ERROR(format,  ...) 	AvxLog::Error (FROM(MODULE_NAME), format, __VA_ARGS__);
-#define AVXLOG_CRIT(format,   ...)	AvxLog::Crit  (FROM(MODULE_NAME), format, __VA_ARGS__);
-#define AVXLOG_ALERT(format,  ...) 	AvxLog::Alert (FROM(MODULE_NAME), format, __VA_ARGS__);
-#define AVXLOG_FATAL(format,  ...) 	AvxLog::Fatal (FROM(MODULE_NAME), format, __VA_ARGS__);
+#define AVXLOG_DEBUG(...) 	AvxLog::Debug (FROM(MODULE_NAME), __VA_ARGS__);
+#define AVXLOG_INFO(...) 	AvxLog::Info  (FROM(MODULE_NAME), __VA_ARGS__);
+#define AVXLOG_NOTICE(...) 	AvxLog::Notice(FROM(MODULE_NAME), __VA_ARGS__);
+#define AVXLOG_WARN(...) 	AvxLog::Warn  (FROM(MODULE_NAME), __VA_ARGS__);
+#define AVXLOG_ERROR(...) 	AvxLog::Error (FROM(MODULE_NAME), __VA_ARGS__);
+#define AVXLOG_CRIT(...)	AvxLog::Crit  (FROM(MODULE_NAME), __VA_ARGS__);
+#define AVXLOG_ALERT(...) 	AvxLog::Alert (FROM(MODULE_NAME), __VA_ARGS__);
+#define AVXLOG_FATAL(...) 	AvxLog::Fatal (FROM(MODULE_NAME), __VA_ARGS__);
 
 class AvxLog
 {
